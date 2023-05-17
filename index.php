@@ -1,22 +1,7 @@
 <?php
-class Product
-{
-    private $brand;
-    private $type;
-    private $description;
-    public function __construct($_brand, $_type, $_description)
-    {
-        $this->brand = $_brand;
-        $this->type = $_type;
-        $this->description = $_description;
-    }
-    public function printProduct()
-    {
-        return "Marca: {$this->brand}, Tipologia:{$this->type}, Descrizione: {$this->description}";
-    }
-}
-
-$first_product = new Product('Esselunga', 'Alimentare', 'Bocconcini di pollo');
+require_once __DIR__ . '/models/product.php';
+require_once __DIR__ . '/models/animals.php';
+$first_product = new Animal('Cane', 'Barilla', 'Croccantini', 'mmh buono il pollo');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +15,7 @@ $first_product = new Product('Esselunga', 'Alimentare', 'Bocconcini di pollo');
 
 <body>
     <?php var_dump($first_product) ?>
+    <?php echo ($first_product->printAll()) ?>
 </body>
 
 </html>
