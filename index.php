@@ -17,12 +17,13 @@ require_once __DIR__ . '/database/db.php';
     <title>PHP OOP 2</title>
 </head>
 
-<body>
-    <div class="container">
-        <h1 class="text-center">AniFood</h1>
+<body class="bg-warning">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <img src="Piccol.jpg" alt="Piccol Logo">
+        <h2>Amici a 4 zampe</h2>
         <div class="row row-cols-3 d-flex justify-content-center">
             <?php foreach ($animalsArray as $animal) { ?>
-                <div class="card" style="width: 18rem;">
+                <div class="card m-2" style="width: 18rem;">
                     <img src="<?php echo ($animal->printProductPhoto()) ?>" class="card-img-top" style="max-width: 400px" alt="...">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <p class="card-text"><?php echo ($animal->printAll()) ?></p>
