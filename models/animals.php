@@ -10,6 +10,6 @@ class Animal extends Product
     }
     public function printAll()
     {
-        return "Tipologia:{$this->pet_type} " . parent::printProduct();
+        return $this->pet_type . "<br>" . parent::printBrand() . "<br>" . parent::printType() . "<br>" . parent::printDescription();
     }
 }

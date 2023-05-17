@@ -10,8 +10,16 @@ class Product
         $this->type = $_type;
         $this->description = $_description;
     }
-    public function printProduct()
+    public function printBrand()
     {
-        return "Marca: {$this->brand}, Tipologia:{$this->type}, Descrizione: {$this->description}";
+        return "Marca: " . $this->brand;
+    }
+    public function printType()
+    {
+        return $this->type;
+    }
+    public function printDescription()
+    {
+        return "Descrizione: " . $this->description;
     }
 }

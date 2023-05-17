@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/models/product.php';
 require_once __DIR__ . '/models/animals.php';
-$first_product = new Animal('Cane', 'Barilla', 'Croccantini', 'mmh buono il pollo');
+require_once __DIR__ . '/database/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +14,11 @@ $first_product = new Animal('Cane', 'Barilla', 'Croccantini', 'mmh buono il poll
 </head>
 
 <body>
-    <?php var_dump($first_product) ?>
-    <?php echo ($first_product->printAll()) ?>
+    <ul>
+        <?php foreach ($animalsArray as $animal) { ?>
+            <li><?php echo ($animal->printAll()) ?></li>
+        <?php } ?>
+    </ul>
 </body>
 
 </html>
