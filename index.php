@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/models/product.php';
 require_once __DIR__ . '/models/animals.php';
+require_once __DIR__ . '/models/type.php';
 require_once __DIR__ . '/database/db.php';
 ?>
 <!DOCTYPE html>
@@ -16,6 +17,7 @@ require_once __DIR__ . '/database/db.php';
 <body>
     <ul>
         <?php foreach ($animalsArray as $animal) { ?>
+            <li><?php var_dump($animal) ?></li>
             <li><?php echo ($animal->printAll()) ?></li>
         <?php } ?>
     </ul>
