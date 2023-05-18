@@ -34,4 +34,10 @@ class Product
     {
         return $this->price . " €";
     }
+    public function checkPrice($_price)
+    {
+        if ($_price <= 0) {
+            throw new Exception('Non puoi mettere prezzo minore o uguale a zero');
+        }
+    }
 }

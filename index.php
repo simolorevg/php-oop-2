@@ -34,6 +34,13 @@ require_once __DIR__ . '/database/db.php';
                 </div>
             <?php } ?>
         </div>
+        <div class="container">
+            <ul>
+                <?php foreach ($productsArray as $product) { ?>
+                    <li>Marca: <?php echo ($product->printBrand()) ?>, Tipo: <?php echo ($product->printType()) ?>, Descrizione:<?php echo ($product->printDescription()) ?>, Prezzo: <?php echo ($product->thisPrice()) ?></li>
+                <?php } ?>
+            </ul>
+        </div>
     </div>
 </body>
 
