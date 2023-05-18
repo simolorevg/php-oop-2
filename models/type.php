@@ -8,4 +8,12 @@ class Type
     {
         $this->typology = $_typology;
     }
+    public function emptyType($_typology)
+    {
+        if ($_typology = '') {
+            throw new Exception('La tipologia non può essere vuota');
+        } else {
+            return $_typology;
+        }
+    }
 }
