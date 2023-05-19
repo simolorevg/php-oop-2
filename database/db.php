@@ -13,14 +13,12 @@ $animalsArray = [
     new Animal('Gatti', 'Boxe S.A.S', $toys, 'Pungiball per Gatti', 'https://shop-cdn-m.mediazs.com/bilder/gioco/per/gatti/ferplast/flashlight/6/400/491124_katzenkarussell_flashlight_6.jpg', 16),
     new Animal('Cani', 'Dog Shower & CO', $beauty, 'Guanto doccia per Cani', 'https://img.fruugo.com/product/8/02/702914028_max.jpg', 33),
     new Animal('Gatti', 'FrontLine', $beauty, 'Frontline antizecche', 'https://www.exoticlife.it/3697-thickbox_default/frontline-combo-spot-on-per-cani.jpg', 44),
-    new Animal('', 'Balconi', $food, 'Croccantini alla mela cotta', '...', 0),
+    new Animal('', 'Balconi', $food, 'Croccantini alla mela cotta', '...', 1),
 ];
-$checkException = false;
 foreach ($animalsArray as $animal) {
     try {
         $animal->checkPrice($animal->price);
     } catch (Exception $error) {
-        $checkException = true;
         echo $error->getMessage();
     }
 }
