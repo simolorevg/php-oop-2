@@ -5,7 +5,7 @@ class Product
     private $type;
     private $description;
     private $photo;
-    private $price;
+    public $price;
     public function __construct($_brand, Type $_type, $_description, $_photo, $_price)
     {
         $this->brand = $_brand;

@@ -15,13 +15,12 @@ $animalsArray = [
     new Animal('Gatti', 'FrontLine', $beauty, 'Frontline antizecche', 'https://www.exoticlife.it/3697-thickbox_default/frontline-combo-spot-on-per-cani.jpg', 44),
     new Animal('', 'Balconi', $food, 'Croccantini alla mela cotta', '...', 0),
 ];
-$productsArray = [
-    new Product('Barilla', $food, 'Bocconi di pollo e manzo', '..', 0)
-];
-foreach ($productsArray as $product) {
+$checkException = false;
+foreach ($animalsArray as $animal) {
     try {
-        $product->checkPrice($product->$_price);
+        $animal->checkPrice($animal->price);
     } catch (Exception $error) {
-        $error->getMessage();
+        $checkException = true;
+        echo $error->getMessage();
     }
 }
